@@ -1,2 +1,22 @@
-<h1>Items#new</h1>
-<p>Find me in app/views/items/new.html.erb</p>
+<h1 class="center">Add Item To Catalogue</h1>
+<hr>
+<div class="container white black-text">
+  <%= form_for @item do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br>
+    <%= f.label :item_image %>
+    <%= f.text_area :item_image %>
+    <br>
+    <%= f.label :price %>
+    <%= f.text_field :price %>
+    <br>
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+    <br>
+    <div class="center blue-text">
+      <%= f.submit %>
+    </div>
+  <% end %>
+</div>
+<%= button_to 'Back', items_path, method: :get, class: "btn waves-effect waves-light grey darken-3" %>
