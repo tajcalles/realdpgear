@@ -19,6 +19,11 @@
       <div class="card grey darken-3">
         <div class="card-content white-text">
           <span class="card-title center"><%= link_to item.name, item_path(item) %></span>
+          <div class="card-action center">
+              <%= link_to 'View', item_path(item) %>
+              <%= link_to 'Edit', edit_item_path(item) %>
+              <%= link_to 'Delete', item, method: :delete %>
+          </div>
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: [:show, :edit, :update, :destroy]
+  before_action :set_item, only: [:show, :edit, :update]
 
   def index
     @items = Item.all
@@ -19,6 +19,7 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
     if @item.save
       redirect_to items_path
+    else
       render :new
     end
   end
@@ -31,12 +32,12 @@ class ItemsController < ApplicationController
     end
   end
 
-  private
-
   def destroy
-    @item.destroy
-    redirect_to items_index_path
+    Item.find(params[:id]).destroy
+    redirect_to items_path
   end
+
+  private
 
   def set_item
     @item = Item.find(params[:id])
