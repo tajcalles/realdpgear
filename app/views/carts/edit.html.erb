@@ -1,2 +1,14 @@
-<h1>Carts#edit</h1>
-<p>Find me in app/views/carts/edit.html.erb</p>
+<h1 class="center">Edit A Cart</h1>
+<p class="center">Buy things</p>
+<%= button_to 'Home', root_path, method: :get, class: "btn waves-effect waves-light grey darken-3" %>
+<hr>
+<div class="container white black-text">
+  <%= form_for @cart do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <div class="center blue-text">
+    <%= f.submit %>
+    </div>
+  <% end %>
+</div>
+<%= button_to 'Back', carts_path, method: :get, class: "btn waves-effect waves-light grey darken-3" %>
