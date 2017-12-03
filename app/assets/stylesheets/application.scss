@@ -26,15 +26,6 @@ body {
     background-image: asset-url("sand_background.png");
 }
 
-.container {
-    background-image: url('/assets/images/sand_background.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 100%;
-    width: 100%;
-}
-
 #site-header {
     color: white;
     .logo {
