@@ -27,5 +27,6 @@
 <div class="container cont_border">
   <h4 class="center blue-text"><%= button_to 'Add Item', new_item_path, method: :get, class: "btn waves-effect waves-light grey darken-3" %></h4>
   <p class="center">Cause you're an admin I guess?</p>
+  <%= button_to 'Log Out', destroy_user_session_path, method: :delete %>
 </div>
 <h4 class="center blue-text"><%= button_to 'Cart', carts_path, method: :get, class: "btn waves-effect waves-light grey darken-3" %></h4>
