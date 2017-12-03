@@ -7,25 +7,24 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body class="light-blue">
   <header class="center" id="site-header">
     <div class="row">
       <h1>DPGear</h1>
     </div>
-    <nav id="site-nav">
-      <ul>
-      <% if user_signed_in? %>
-      <% end %>
-      <li>
-        <%= link_to 'All Items', root_path, method: :get, class: "btn waves-effect waves-light grey darken-3" %>
-      </li>
-      <li> <!-- KEEP AT BOTTOM OF LIST -->
-        <%= link_to 'Log Out', destroy_user_session_path, method: :delete, 
-          class: "btn waves-effect waves-light grey darken-3" %>
-      </li>
-      </ul>
-    </nav>
+    <% if user_signed_in? %>
+      <nav id="site-nav">
+        <ul>
+          <li>
+            <%= link_to 'All Items', root_path, method: :get, class: "btn waves-effect waves-light grey darken-3" %>
+          </li>
+          <li> <!-- KEEP AT BOTTOM OF LIST -->
+            <%= link_to 'Log Out', destroy_user_session_path, method: :delete, 
+              class: "btn waves-effect waves-light grey darken-3" %>
+          </li>
+        </ul>
+      </nav>
+    <% end %>
   </header>
   <hr />
     <div class="container">
