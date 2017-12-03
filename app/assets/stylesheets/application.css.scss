@@ -13,16 +13,31 @@
  *= require_tree .
  *= require_self
  */
+
 @import 'materialize';
 
 /* Apply a natural box layout model to all elements... */
+
 * {
-  box-sizing: border-box !important;
+    box-sizing: border-box !important;
+}
+
+body {
+    background-image: asset-url("sand_background.png");
+}
+
+.container {
+    background-image: url('/assets/images/sand_background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
 }
 
 #site-header {
-  color: white;
-  .logo {
-    font-size: 2.75em;
-  }
+    color: white;
+    .logo {
+        font-size: 2.75em;
+    }
 }

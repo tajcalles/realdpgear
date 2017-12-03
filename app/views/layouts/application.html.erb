@@ -7,7 +7,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-  <body class="light-blue">
+  <body id="site-body">
   <header class="center" id="site-header">
     <% if user_signed_in? %>
       <div class="navbar fixed">
