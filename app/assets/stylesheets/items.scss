@@ -14,15 +14,16 @@
         font-size: 2em;
     }
     input {
-        padding: 10px;
+        font-size: 1.25em;
+        padding: 10px 10px 0 10px;
     }
-
-    .waves-input-wrapper {
-      margin-top: 25px
-    }
-
     textarea {
+        border-top: 0;
+        border-right: 0;
+        border-bottom: 1px solid rgb(158, 158, 158);
+        border-left: 1px solid rgb(158, 158, 158);
         height: 6em;
+        outline: none;
         padding: 10px;
         resize: none;
     }
