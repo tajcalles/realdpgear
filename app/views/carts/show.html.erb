@@ -1,2 +1,17 @@
-<h1>Carts#show</h1>
-<p>Find me in app/views/carts/show.html.erb</p>
+<div class="col s12 m7">
+  <h2 class="header"><%= @cart.name %></h2>
+  <div class="card horizontal">
+    <div class="card-stacked">
+      <div class="card-content">
+        <ul>
+          <li><strong>$<%= @cart.products %></strong><li>
+        <ul>
+          <p>Total:<%= @cart.total %></p>
+      </div>
+      <div class="card-action">
+        <%= link_to 'Edit', edit_cart_path(@cart), method: :get %>
+        <%= link_to 'Delete Cart', @cart, method: :delete %>
+      </div>
+    </div>
+  </div>
+</div>
