@@ -13,7 +13,7 @@
       <div class="navbar fixed">
         <nav>
           <div class="nav-wrapper">
-            <a href="#" class="left logo">DPGear</a>
+            <%= link_to 'DPGear', root_path, class: 'center logo' %>
             <ul class="right">
               <li>
                 <%= link_to 'All Items', root_path, method: :get, class: 'waves-effect waves-light' %>
@@ -28,6 +28,10 @@
           </div>
         </nav>
       </div>
+    <% else%>
+      <nav>
+        <%= link_to 'DPGear', root_path, class: 'center logo' %>
+      </nav>
     <% end %>
   </header>
   <hr />
