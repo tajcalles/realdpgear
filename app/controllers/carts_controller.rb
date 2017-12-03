@@ -1,4 +1,5 @@
 class CartsController < ApplicationController
+  before_action :set_user
   before_action :set_cart, only: [:show, :edit, :update]
 
   def index
@@ -41,6 +42,10 @@ class CartsController < ApplicationController
 
   def set_cart
     @cart = Cart.find(params[:id])
+  end
+
+  def set_user
+    @user = User.find(params[:board_id])
   end
 
   def cart_params
