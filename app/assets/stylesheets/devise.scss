@@ -25,7 +25,30 @@
 //     }
 // }
 
+.action-view {
+  text-align: center;
+}
+
+
 // Edit User Registration Info
-.edit-user {
-  background-color: gray;
+.edit_user {
+  background-color: white;
+  color: white;
+  padding: 29px;
+  label {
+    color: white;
+    font-size: 2em;
+  }
+  .cancel-button {
+    margin: 0 auto;
+  }
+}
+.edit-user-back {
+  padding-bottom: 2em;
+}
+
+// New session
+// Login Page
+.login-card {
+  padding-bottom: 20px;
 }
