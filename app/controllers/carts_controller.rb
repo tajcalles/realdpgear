@@ -18,7 +18,7 @@ class CartsController < ApplicationController
   def create
     @cart = Cart.new(cart_params)
     if @cart.save
-      redirect_to carts_path
+      redirect_to items_path
     else
       render :new
     end
@@ -26,13 +26,13 @@ class CartsController < ApplicationController
 
   def update
     if @cart.update(cart_params)
-      redirect_to carts_path
+      redirect_to items_path
     else
       render :edit
     end
   end
 
-  def dsestroy
+  def destroy
     Cart.find(params[:id]).destroy
     redirect_to carts_path
   end
@@ -40,10 +40,10 @@ class CartsController < ApplicationController
   private
 
   def set_cart
-    @card = Cart.find(params[:id])
+    @cart = Cart.find(params[:id])
   end
 
   def cart_params
-    params.require(:cart).permit(:name)
+    params.require(:cart).permit(:name, :products, :total)
   end
 end
