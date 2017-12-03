@@ -14,3 +14,18 @@
  *= require_self
  */
 @import 'materialize';
+
+/* Apply a natural box layout model to all elements... */
+* {
+  box-sizing: border-box !important;
+}
+
+#site-header {
+  color: white;
+  #site-nav {
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}

@@ -5,10 +5,39 @@
     border: 1px solid white;
 }
 
+// Main Items Page
 // Index.html.erb
 .card-title {
     a {
         color: white;
+    }
+}
+
+// Item View
+// show.html.erb
+.item-view {
+    border-top-right-radius: 50px;
+    background-color: rgba(192, 192, 192, 0.664);
+    padding: 20px;
+    margin: 0 auto;
+    width: 50%;
+    .item_row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    img {
+        width: 200px;
+        height: 200px;
+    }
+    .item-info {
+        width: auto;
+        margin-left: 30px;
+    }
+    .item_task_links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
 
