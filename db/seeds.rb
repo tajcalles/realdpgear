@@ -13,5 +13,13 @@
      description: Faker::ChuckNorris.fact
    )
  end
- 
+
+ 3.times do
+   @x = 1
+   Cart.create(
+     name: "Cart #{@x}"
+   )
+   @x +=1
+ end
+
 puts "Seeded!"
