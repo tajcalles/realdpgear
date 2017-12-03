@@ -16,7 +16,7 @@
 @import 'materialize';
 
 * {
-  box-sizing: border-box;
+  box-sizing: border-box !important;
 }
 
 #site-header {
