@@ -3,16 +3,17 @@
 <hr>
 <div class="container">
   <img src="http://placehold.it/<%= @item.item_image %>">
-  <div class=container>
+  <div class="container item-form">
     <p>
       <strong><%= @item.name %></strong>
     </p>
+    <img src="<%= @item.item_image %>" />
     <p>
       <strong><%= @item.description %></strong>
     </p>
     <p>
       <strong> $ <%= @item.price %> </strong>
-      + shipping
+      + Shipping
       <br>
       (C.R.E.A.M.)
     </p>

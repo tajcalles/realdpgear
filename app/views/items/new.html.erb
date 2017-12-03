@@ -1,22 +1,20 @@
 <h1 class="center">Add Item To Catalogue</h1>
 <hr>
-<div class="container white black-text">
+<div class="container item-form">
   <%= form_for @item do |f| %>
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, placeholder: 'Item Name' %>
     <br>
-    <%= f.label :item_image %>
-    <%= f.text_area :item_image %>
+    <%= f.label :item_image, 'Image' %>
+    <%= f.text_field :item_image, placeholder: 'Item Name' %>
     <br>
     <%= f.label :price %>
-    <%= f.text_field :price %>
+    <%= f.text_field :price, placeholder: 'Item Price' %>
     <br>
     <%= f.label :description %>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, placeholder: 'Item Description' %>
     <br>
-    <div class="center blue-text">
-      <%= f.submit %>
-    </div>
+    <%= f.submit nil, class: 'waves-effect waves-light btn' %>
+    <%= button_to 'Back To Items', items_path, method: :get, class: "right btn waves-effect waves-light grey darken-3" %>
   <% end %>
 </div>
-<%= button_to 'Back', items_path, method: :get, class: "btn waves-effect waves-light grey darken-3" %>

@@ -1,7 +1,39 @@
 // Place all the styles related to the items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
 .cont_border {
-  border: 1px solid white;
+    border: 1px solid white;
+}
+
+// Index.html.erb
+.card-title {
+    a {
+        color: white;
+    }
+}
+
+// Editing & Creating Items
+// new.html.erb, edit.html.erb
+.item-form {
+    background-color: rgba(192, 192, 192, 0.664);
+    margin-top: 40px !important;
+    padding: 2em 2em 1.5em 2em;
+    label {
+        color: white;
+        font-size: 2em;
+    }
+    input {
+        font-size: 1.25em;
+        padding: 10px 10px 0 10px;
+    }
+    textarea {
+        border-top: 0;
+        border-right: 0;
+        border-bottom: 1px solid rgb(158, 158, 158);
+        border-left: 1px solid rgb(158, 158, 158);
+        height: 6em;
+        outline: none;
+        padding: 10px;
+        resize: none;
+    }
 }

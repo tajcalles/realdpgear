@@ -10,7 +10,7 @@
      name: Faker::Lorem.word,
      item_image: Faker::Placeholdit.image("50x50"),
      price: Faker::Number.decimal(2),
-     description: Faker::Hipster.paragraph
+     description: Faker::ChuckNorris.fact
    )
  end
 
