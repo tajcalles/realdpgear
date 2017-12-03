@@ -1,4 +1,5 @@
 <h1 class="center">Shades For Days</h1>
+<h5><%= button_to 'Home', root_path, method: :get, class: "btn waves-effect waves-light grey darken-3" %></h5>
 <hr>
 <p class="center white-text">Click to view details</p>
 <div class="carousel">
@@ -18,6 +19,11 @@
       <div class="card grey darken-3">
         <div class="card-content white-text">
           <span class="card-title center"><%= link_to item.name, item_path(item) %></span>
+          <div class="card-action center">
+              <%= link_to 'View', item_path(item) %>
+              <%= link_to 'Edit', edit_item_path(item) %>
+              <%= link_to 'Delete', item, method: :delete %>
+          </div>
         </div>
       </div>
     </div>

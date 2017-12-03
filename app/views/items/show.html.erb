@@ -1,2 +1,23 @@
-<h1>Items#show</h1>
-<p>Find me in app/views/items/show.html.erb</p>
+<h1 class="center"><%= @item.name %></h1>
+<h5><%= button_to 'Home', root_path, method: :get, class: "btn waves-effect waves-light grey darken-3" %></h5>
+<hr>
+<div class="container">
+  <img src="http://placehold.it/<%= @item.item_image %>">
+  <div class="container item-form">
+    <p>
+      <strong><%= @item.name %></strong>
+    </p>
+    <img src="<%= @item.item_image %>" />
+    <p>
+      <strong><%= @item.description %></strong>
+    </p>
+    <p>
+      <strong> $ <%= @item.price %> </strong>
+      + Shipping
+      <br>
+      (C.R.E.A.M.)
+    </p>
+  </div>
+  <%= button_to 'Edit', edit_item_path(@item), method: :get, class: "btn waves-effect waves-light grey darken-3" %>
+  <%= button_to 'Delete', @item, method: :delete, class: "btn waves-effect waves-light grey darken-3" %>
+</div>
