@@ -1,23 +1,21 @@
-<h1 class="center"><%= @item.name %></h1>
-<h5><%= button_to 'Home', root_path, method: :get, class: "btn waves-effect waves-light grey darken-3" %></h5>
-<hr>
-<div class="container">
-  <img src="http://placehold.it/<%= @item.item_image %>">
-  <div class="container item-form">
-    <p>
-      <strong><%= @item.name %></strong>
-    </p>
-    <img src="<%= @item.item_image %>" />
-    <p>
-      <strong><%= @item.description %></strong>
-    </p>
-    <p>
-      <strong> $ <%= @item.price %> </strong>
-      + Shipping
-      <br>
-      (C.R.E.A.M.)
-    </p>
+<div class="col s12 m7">
+  <h2 class="header"><%= @item.name %></h2>
+  <div class="card horizontal">
+    <div class="card-image">
+      <img src="https://lorempixel.com/100/190/nature/6">
+    </div>
+    <div class="card-stacked">
+      <div class="card-content">
+        <strong>$<%= @item.price %></strong>
+        <i>+ Shipping</i>
+        (C.R.E.A.M.)
+        <p><%= @item.description %></p>
+      </div>
+      <div class="card-action">
+        <%= link_to 'Edit', edit_item_path(@item), method: :get %>
+        <%= link_to 'Delete Item', @item, method: :delete %>
+      </div>
+    </div>
   </div>
-  <%= button_to 'Edit', edit_item_path(@item), method: :get, class: "btn waves-effect waves-light grey darken-3" %>
-  <%= button_to 'Delete', @item, method: :delete, class: "btn waves-effect waves-light grey darken-3" %>
 </div>
+           

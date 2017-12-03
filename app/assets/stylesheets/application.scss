@@ -14,3 +14,13 @@
  *= require_self
  */
 @import 'materialize';
+
+#site-header {
+  color: white;
+  #site-nav {
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
