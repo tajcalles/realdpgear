@@ -3,7 +3,7 @@
 <hr>
 <div class="row">
   <% @carts.each do |cart| %>
-    <div class="col s6">
+    <div class="col s12 m12 l6 xl6">
       <div class="card grey darken-3">
         <div class="card-content">
           <span class="card-title center"><%= link_to cart.name, cart_path(cart) %></span>
