@@ -34,9 +34,38 @@
       </nav>
     <% end %>
   </header>
-  <hr />
     <div class="container">
       <%= yield %>
     </div>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">DPGear</h5>
+            <p class="grey-text text-lighten-4">An Amazing Project by Jace, Dan, Pete, &amp; Taj</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <% if user_signed_in? %>
+                <li>
+                  <%= link_to 'Cart', carts_path, method: :get %>
+                </li>
+                <li>
+                  <%= link_to 'Edit Your Account', edit_user_registration_path, method: :get %>
+                </li>
+              <% else %>
+                <li><%= link_to "Create an Account", new_registration_path(resource_name) %></li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          © 2017 Copyright DPGear
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
