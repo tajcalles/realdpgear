@@ -27,13 +27,25 @@ body {
 }
 
 #site-header {
+    background-color: #2196f3;
     color: white;
     .logo {
         font-size: 2.75em;
     }
+    .nav-wrapper {
+        background-color: #2196f3;
+    }
 }
 
 .logo {
-  height: 50px;
-  margin: 6px 0 0 6px;
+    height: 50px;
+    margin: 6px 0 0 6px;
+}
+
+.page-footer {
+    background-color: #2196f3;
+    a {
+        color: white;
+        text-decoration: underline;
+    }
 }

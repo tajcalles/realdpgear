@@ -13,8 +13,7 @@
       <div class="navbar fixed">
         <nav>
           <div class="nav-wrapper">
-            <img class="left logo" src="/assets/Logo.png">
-            <%= link_to 'DPGear', root_path, class: 'center logo' %>
+            <a href="<%= root_path %>"><img class="left logo" src="/assets/Logo.png"></a>
             <ul class="right">
               <li>
                 <%= link_to 'All Items', root_path, method: :get, class: 'waves-effect waves-light' %>
@@ -31,7 +30,7 @@
       </div>
     <% else%>
       <nav>
-        <%= link_to 'DPGear', root_path, class: 'center logo' %>
+        <a href="<%= root_path %>"><img class="left logo" src="/assets/Logo.png"></a>
       </nav>
     <% end %>
   </header>
