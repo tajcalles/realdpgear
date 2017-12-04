@@ -20,7 +20,7 @@
   <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
-    < em>(<%= @minimum_password_length %> characters minimum)</em>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
@@ -42,6 +42,6 @@
   <%- if controller_name != 'sessions' %>
     <%= link_to "Back", new_session_path(resource_name) %><br />
   <% end -%>
-  </div>  
+  </div>
 </div>
 </div>
